@@ -35,7 +35,7 @@ uv pip install git+https://github.com/otaheri/bps_torch
 ```
 Install other dependencies. 
 ```
-uv pip install joblib trimesh 
+uv pip install joblib trimesh ema_pytorch einops imageio scikit-learn matplotlib
 ```
 
 ### Testing

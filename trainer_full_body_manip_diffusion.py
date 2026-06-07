@@ -10,7 +10,10 @@ import trimesh
 from tqdm import tqdm
 from pathlib import Path
 
-import wandb
+try:
+    import wandb
+except ModuleNotFoundError:
+    wandb = None
 
 import torch
 import torch.nn as nn

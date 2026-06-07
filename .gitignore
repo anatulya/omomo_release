@@ -19,3 +19,8 @@ core
 *.json
 *.blend
 *.blend*
+data/
+blender*/
+debug_exports/
+debug_vis/
+overlay_deubg/
