@@ -28,18 +28,14 @@ Install human_body_prior.
 ```
 uv pip install "git+https://github.com/nghorbani/human_body_prior.git"
 ```
-
-I don't use this:
 Install BPS.
 ```
-pip install git+https://github.com/otaheri/chamfer_distance
-pip install git+https://github.com/otaheri/bps_torch
+uv pip install git+https://github.com/otaheri/chamfer_distance
+uv pip install git+https://github.com/otaheri/bps_torch
 ```
 Install other dependencies. 
 ```
 uv pip install joblib trimesh 
-uv pip install git+'https://github.com/otaheri/chamfer_distance'
-uv pip install git+https://github.com/otaheri/bps_torch
 ```
 
 ### Testing
