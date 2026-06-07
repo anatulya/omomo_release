@@ -22,14 +22,11 @@ uv pip install torch torchvision torchaudio --index-url https://download.pytorch
 ```
 Install PyTorch3D.
 ```
-cd pytorch3d/
-uv pip install -e . --no-build-isolation
+uv pip install "git+https://github.com/facebookresearch/pytorch3d.git" --no-build-isolation
 ```
 Install human_body_prior. 
 ```
-git clone https://github.com/nghorbani/human_body_prior.git
-cd human_body_prior/
-uv sync
+uv pip install "git+https://github.com/nghorbani/human_body_prior.git"
 ```
 
 I don't use this:
@@ -40,7 +37,9 @@ pip install git+https://github.com/otaheri/bps_torch
 ```
 Install other dependencies. 
 ```
-pip install -r requirements.txt 
+uv pip install joblib trimesh 
+uv pip install git+'https://github.com/otaheri/chamfer_distance'
+uv pip install git+https://github.com/otaheri/bps_torch
 ```
 
 ### Testing

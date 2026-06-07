@@ -1,6 +1,0 @@
-[submodule "human_body_prior"]
-	path = human_body_prior
-	url = git@github.com:nghorbani/human_body_prior.git
-[submodule "pytorch3d"]
-	path = pytorch3d
-	url = org-16943930@github.com:facebookresearch/pytorch3d.git
