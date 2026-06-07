@@ -11,28 +11,28 @@ Clone the repo.
 git clone https://github.com/lijiaman/omomo_release.git
 cd omomo_release/
 ```
-Create a virtual environment using Conda and activate the environment. 
+Create a virtual environment using uv and activate the environment. 
 ```
-conda create -n omomo_env python=3.8
-conda activate omomo_env 
+uv venv --python 3.10
+source .venv/bin/activate
 ```
 Install PyTorch. 
 ```
-conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
+uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
 ```
-Install PyTorch3D. 
+Install PyTorch3D.
 ```
-conda install -c fvcore -c iopath -c conda-forge fvcore iopath
-conda install -c bottler nvidiacub
-pip install --no-index --no-cache-dir pytorch3d -f https://dl.fbaipublicfiles.com/pytorch3d/packaging/wheels/py38_cu113_pyt1110/download.html
+cd pytorch3d/
+uv pip install -e . --no-build-isolation
 ```
 Install human_body_prior. 
 ```
 git clone https://github.com/nghorbani/human_body_prior.git
-pip install tqdm dotmap PyYAML omegaconf loguru
 cd human_body_prior/
-python setup.py develop
+uv sync
 ```
+
+I don't use this:
 Install BPS.
 ```
 pip install git+https://github.com/otaheri/chamfer_distance
